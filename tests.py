@@ -22,7 +22,7 @@ class MyTest(TestCase):
         self.assertEqual(response.json, dict(status=True, result = 120, message = "OK"))
     
     def test_factorial_NAN(self):
-        response = self.client.get("/factorial?n=NAN")
+        response = self.client.get("/factorial?n=2")
         self.assertEqual(response.json, dict(status=False,message="La entrada tiene que ser número."))
 
 if __name__ == '__main__':
